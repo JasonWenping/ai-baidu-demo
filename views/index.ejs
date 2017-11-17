@@ -129,9 +129,10 @@
   	</header>
 
   	<section>
-  		<ul>
+  		<ul id="gallery">
+  			<li style="background: url(/images/F181EE38E04B4707A5A326E442E81D45.jpg) center; background-size: cover;"></li>
   			<% for(var i=0;i< gallery.length;i++){ %>
-  			<li><%= gallery[i] %></li>
+  			<li><a href="#"><img scr="/images/<%= gallery[i] %>.jpg"></a></li>
   			<%}%>
   		</ul>
   	</section>

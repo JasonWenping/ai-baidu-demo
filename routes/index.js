@@ -20,6 +20,8 @@ var list2 = ['人脸核身','人脸会场签到','人脸会员识别','人脸闸
 var list3 = ['客户案例','应用场景'];
 var list4 = ['文档中心','SDK下载','教学视频','常见问题'];
 
+var gallery = ['73A34901F47A43249F43FAD4BBE9A01A','C9F0106EB5F04D3295A53171CB439DDF','E6EB2FE76B17440FA15FBA8FA8226BF1','ED52C0039B744532BE7CF8EC6DDBD1B0','F181EE38E04B4707A5A326E442E81D45'];
+
 router.get('/', async (ctx, next) => {
   await ctx.render('index', {
     title: 'Hello Koa 2!',
@@ -39,7 +41,8 @@ router.get('/', async (ctx, next) => {
     list_12:list_12,
     list2:list2,
     list3:list3,
-    list4:list4
+    list4:list4,
+    gallery:gallery
   })
 })
 

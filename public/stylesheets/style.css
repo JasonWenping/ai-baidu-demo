@@ -66,11 +66,12 @@ nav h3:hover,nav p:hover,.nav_title_3 ul li:hover,.nav_title_4 ul li:hover{
 	color:#00B7FF;
 	cursor: pointer;
 }
-nav ul{
+ul{
 	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
+
 nav ul li{
 	display: block;
 	width: 120px;
@@ -165,4 +166,22 @@ button{
 	margin: 15px 0 0 30px;
 	border:none;
 	color: #FFF;
+}
+
+section{
+	width: 100%;
+	height: 530px;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+section ul li{
+	height: 530px;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+section ul li img{
+	width: 100%;
+	margin: 0 auto;
 }
