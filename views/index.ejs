@@ -5,7 +5,140 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>EJS Welcome to <%= title %></p>
+  	<header>
+  		<div class="logo"></div>
+  		<nav>  		
+  		<ul id="navBox">
+  			<li><a href=""><%= nav_title[0] %></a>
+  				<div class="nav_title_2">
+  				<h3><%= title_2[0] %></h3>
+  				<% for (var i = 0 ; i< list_1.length;i++){ %>
+  				<p><%= list_1[i] %></p>
+  				<%}%>
+
+  				<h3><%= title_2[1] %></h3>
+
+  				<h3><%= title_2[2] %></h3>
+
+  				<h3><%= title_2[3] %></h3>
+  				<% for (var i = 0 ; i< list_2.length;i++){ %>
+  				<p><%= list_2[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[4] %></h3>
+  				<% for (var i = 0 ; i< list_3.length;i++){ %>
+  				<p><%= list_3[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[5] %></h3>
+  				<% for (var i = 0 ; i< list_4.length;i++){ %>
+  				<p><%= list_4[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[6] %></h3>
+  				<% for (var i = 0 ; i< list_5.length;i++){ %>
+  				<p><%= list_5[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[7] %></h3>
+  				<% for (var i = 0 ; i< list_6.length;i++){ %>
+  				<p><%= list_6[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[8] %></h3>
+  				<h3><%= title_2[9] %></h3>
+
+  				<h3><%= title_2[10] %></h3>
+  				<% for (var i = 0 ; i< list_7.length;i++){ %>
+  				<p><%= list_7[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[11] %></h3>
+
+  				<h3><%= title_2[12] %></h3>				
+
+  				<h3><%= title_2[13] %></h3>
+
+  				<h3><%= title_2[14] %></h3>
+  				<% for (var i = 0 ; i< list_8.length;i++){ %>
+  				<p><%= list_8[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[15] %></h3>
+  				<% for (var i = 0 ; i< list_9.length;i++){ %>
+  				<p><%= list_9[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[16] %></h3>
+  				<% for (var i = 0 ; i< list_10.length;i++){ %>
+  				<p><%= list_10[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[17] %></h3>  				
+  				<% for (var i = 0 ; i< list_11.length;i++){ %>
+  				<p><%= list_11[i] %></p>
+  				<% } %>
+
+  				<h3><%= title_2[18] %></h3>
+
+  				<h3><%= title_2[19] %></h3>
+  				<% for (var i = 0 ; i< list_12.length;i++){ %>
+  				<p><%= list_12[i] %></p>
+  				<% } %>
+  			</div>
+  			</li>
+  			<li>
+  				<a href=""><%= nav_title[1] %></a>
+  				<div class="nav_title_3">
+  					<ul>
+  					<% for(var i =0;i < list2.length ; i++){ %>
+  					<li><%= list2[i] %></li>
+  				    <%}%>
+  				</ul>
+  				</div>
+  			</li>
+  			<li>
+  				<a href=""><%= nav_title[2] %></a>
+  				<div class="nav_title_4">
+  					<ul>
+  					<% for(var i =0;i < list3.length ; i++){ %>
+  					<li><%= list3[i] %></li>
+  				    <%}%>
+  				</ul>
+  				</div>
+  			</li>
+  			<li>
+  				<a href=""><%= nav_title[3] %></a>
+  				<div class="nav_title_4">
+  					<ul>
+  					<% for(var i =0;i < list3.length ; i++){ %>
+  					<li><%= list4[i] %></li>
+  				    <%}%>
+  				</ul>
+  				</div>
+  			</li>
+  			<li>
+  				<a href=""><%= nav_title[4] %></a>
+  			</li>
+  		</ul>
+  		<span><a href="">资讯</a></span>
+  		<span><a href="">社区</a></span>
+  		<div class="btn"><button type="button">控制台</button></div>
+  	</nav>
+
+  	</header>
+
+  	<section>
+  		<ul>
+  			<% for(var i=0;i< gallery.length;i++){ %>
+  			<li><%= gallery[i] %></li>
+  			<%}%>
+  		</ul>
+  	</section>
+
+
+
+  	<script type="text/javascript" src="/javascripts/addLoadEvent.js"></script>
+  	<script type="text/javascript" src="/javascripts/default.js"></script>
   </body>
 </html>
