@@ -20,11 +20,12 @@ var list2 = ['人脸核身','人脸会场签到','人脸会员识别','人脸闸
 var list3 = ['客户案例','应用场景'];
 var list4 = ['文档中心','SDK下载','教学视频','常见问题'];
 
-var gallery = ['73A34901F47A43249F43FAD4BBE9A01A','C9F0106EB5F04D3295A53171CB439DDF','E6EB2FE76B17440FA15FBA8FA8226BF1','ED52C0039B744532BE7CF8EC6DDBD1B0','F181EE38E04B4707A5A326E442E81D45'];
+var gallery = ['73A34901F47A43249F43FAD4BBE9A01A.jpg','C9F0106EB5F04D3295A53171CB439DDF.jpg','E6EB2FE76B17440FA15FBA8FA8226BF1.jpg','ED52C0039B744532BE7CF8EC6DDBD1B0.jpg','F181EE38E04B4707A5A326E442E81D45.jpg'];
+var link_title = ['开放数据集助力AI成长 ','人脸硬件合作伙伴计划 ','Dumix AR开放平台全面公测 ','数据智能 智胜未来 ','图像审核钜惠上线 '];
 
 router.get('/', async (ctx, next) => {
   await ctx.render('index', {
-    title: 'Hello Koa 2!',
+    title: '百度AI开放平台',
     nav_title:nav_title,
     title_2:title_2,
     list_1:list_1,
@@ -42,10 +43,17 @@ router.get('/', async (ctx, next) => {
     list2:list2,
     list3:list3,
     list4:list4,
-    gallery:gallery
+    gallery:gallery,
+    link_title:link_title
   })
 })
 
+router.get('/test',async (ctx, next) =>{
+	await ctx.render('testgallery',{
+		title:'test',
+		gallery:gallery
+	})
+})
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string'
 })

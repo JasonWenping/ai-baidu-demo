@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title> 
+    <link rel="stylesheet" type="text/css" href="/stylesheets/gallery.css" />
+  </head>
+  <body>
+
+
+  	<section>
+  		<ul id="gallery2">        
+        <% for(var i=0;i< gallery.length;i++){ %>
+        <li style="background: url(/images/<%= gallery[i] %>) center; background-size: cover;"></li>
+        <%}%>
+  		</ul>
+  	</section>
+
+  <script type="text/javascript" src="/javascripts/addLoadEvent.js"></script>
+  <script type="text/javascript" src="javascripts/default.js"></script>
+  </body>
+</html>

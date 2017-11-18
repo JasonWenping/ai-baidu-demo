@@ -130,13 +130,41 @@
 
   	<section>
   		<ul id="gallery">
-  			<li style="background: url(/images/F181EE38E04B4707A5A326E442E81D45.jpg) center; background-size: cover;"></li>
   			<% for(var i=0;i< gallery.length;i++){ %>
-  			<li><a href="#"><img scr="/images/<%= gallery[i] %>.jpg"></a></li>
+  			<li style="background: url(/images/<%= gallery[i] %>) center; background-size: cover;" data-index=<%= i %>></li>
   			<%}%>
   		</ul>
-  	</section>
+  		<!--
+  		<table>
+  			<tr>
+  				<% for(var i=0;i< gallery.length;i++){ %>
+  				<td>
+  					<hr />
+  					<p><%= link_title[i] %></p>
+  				</td>
+  				<%}%>
+  			</tr>
+  		</table>
 
+  		<ul>
+  	   		<% for(var i=0;i< gallery.length;i++){ %>
+  	   		<li data-index=<%= i %>>
+  	   			<div class="hr"><hr /></div>
+  				<div class="hoverButton"><%= link_title[i] %></div>
+  			</li>
+  	   		<%}%>
+  	   	</ul>
+  	-->
+  	 <div id="galButton">
+  	   	<% for(var i=0;i< gallery.length;i++){ %>
+  	   	<div class="gal-btn-list" data-index=<%= i %>>
+  	   		<a href=""><div class="lineButton">kkk</div></a>
+  	   		<div class="hoverButton"><%= link_title[i] %></div>
+  	   	</div>
+  	   	<%}%>
+  	   	
+  	   </div>  	   
+  	</section>
 
 
   	<script type="text/javascript" src="/javascripts/addLoadEvent.js"></script>

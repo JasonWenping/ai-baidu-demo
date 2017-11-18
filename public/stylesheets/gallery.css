@@ -1,0 +1,59 @@
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	width: 100%;
+	height: 530px;
+	display: block;
+}
+
+section ul li{
+	height: 530px;
+	width: 100%;
+	float: left;
+	display: block;
+	position: absolute;
+}
+
+
+@-webkit-keyframes fadeInOut{
+	0%{
+		opacity: 1;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+section ul li{
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-direction: normal;
+	position: absolute;
+}
+section ul li{
+	-webkit-animation-play-state: paused;
+}
+
+section table{
+	width: 750px;
+	height: 25px;
+	line-height: 25px;
+	z-index: 10;
+}
+section table hr{
+	color: #000;
+	opacity: 0.7;
+}
