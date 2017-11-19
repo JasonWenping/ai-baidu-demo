@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/gallery.css" />
   </head>
   <body>
   	<header>
@@ -131,39 +132,20 @@
   	<section>
   		<ul id="gallery">
   			<% for(var i=0;i< gallery.length;i++){ %>
-  			<li style="background: url(/images/<%= gallery[i] %>) center; background-size: cover;" data-index=<%= i %>></li>
+  			<li style="background: url(/images/<%= gallery[i] %>) center; background-size: cover;  "data-index=<%= i %>></li>
   			<%}%>
   		</ul>
-  		<!--
-  		<table>
-  			<tr>
-  				<% for(var i=0;i< gallery.length;i++){ %>
-  				<td>
-  					<hr />
-  					<p><%= link_title[i] %></p>
-  				</td>
-  				<%}%>
-  			</tr>
-  		</table>
 
-  		<ul>
-  	   		<% for(var i=0;i< gallery.length;i++){ %>
-  	   		<li data-index=<%= i %>>
-  	   			<div class="hr"><hr /></div>
-  				<div class="hoverButton"><%= link_title[i] %></div>
-  			</li>
-  	   		<%}%>
-  	   	</ul>
-  	-->
-  	 <div id="galButton">
-  	   	<% for(var i=0;i< gallery.length;i++){ %>
-  	   	<div class="gal-btn-list" data-index=<%= i %>>
-  	   		<a href=""><div class="lineButton">kkk</div></a>
-  	   		<div class="hoverButton"><%= link_title[i] %></div>
-  	   	</div>
-  	   	<%}%>
-  	   	
-  	   </div>  	   
+	  	 <div class="gallery_bg"></div>
+	  	 <div id="galButton">
+	  	   	<% for(var i=0;i< gallery.length;i++){ %>
+	  	   	<div class="gal-btn-list" data-index=<%= i %>>
+	  	   		<div class="lineButton"></div>
+	  	   		<div class="hoverButton"><%= link_title[i] %></div>
+	  	   	</div>
+	  	   	<%}%>
+	  	   	
+	  	   </div>  	   
   	</section>
 
 

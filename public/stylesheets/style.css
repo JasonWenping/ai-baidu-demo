@@ -10,6 +10,11 @@ h3,nav ul li,.nav_title_3 ul li,nav span,button{
 	color: #FFF;
 }
 
+.hoverButton{
+	font-size: 14px;
+	color: #FFF;
+}
+
 nav a {
     color: #FFF;
     text-decoration: none;
@@ -167,8 +172,13 @@ button{
 	border:none;
 	color: #FFF;
 }
-
 section{
+	width: 100%;
+	height: 530px;
+	overflow: hidden;
+}
+
+section ul{
 	width: 100%;
 	height: 530px;
 	display: block;
@@ -182,105 +192,53 @@ section ul li{
 	position: absolute;
 	display: block;
 }
-/*
-section table{
-	width: 600px;
-	height: 25px;
-	position: relative;
-	top: 480px;
-	margin: 0 auto;
+.gallery_bg{
+	height: 80px;
+	width: 100%;
+	background: url(/images/gallery_bg.png) repeat-x;
+	position: absolute;
+	top: 60px;
+	z-index: 5	;
 }
-section td{
-	width: 150px;
-	height: 30px;
-	background: #00B7FF;
-	cursor: pointer;
-	border: none;
-}
-section table hr{
-	opacity: 0.5;	
-	width: 50px;
-	border: solid #BABABA 2px;
-}
-section table p{
-	display: none;
-	width: 150px;
-	height: 30px;
-	background: #00B7FF;
-}
-*/
 
 #galButton{
-	width: 600px;
+	width: 1000px;
 	height: 25px;
-	position: relative;
-	top: 480px;
-	margin: 0 auto;
-	z-index: 2;
+	top:480px;
+	left: 170px;
+	margin: 0px auto;
+	position: absolute;
 	text-align: center;
 }
 .gal-btn-list{
 	height: 25px;
-	width: 100px;
-	line-height: 25px;
+	width: 180px;
+	line-height: 30px;
 	float: left;
+	position: relative;
+	cursor: pointer;
 }
-.gal-btn-list a:hover{
-	width: 100px;
-	height: 30px;
-	background: #00B7FF;
-}
+
 .lineButton{
 	width: 80px;
 	height: 4px;
 	opacity: 0.3;
 	background: #BABABA;
-	margin: 10px 5px;
-	top: 10px;
+	top: 12px;
+	left: 50px;
+	position: absolute;
 }
 .hoverButton{
 	display: none;
-	width: 100px;
+	width: 180px;
 	height: 30px;
-	background: #00B7FF;
+	background: -webkit-linear-gradient(left,#2290D9, #6A18B4); 
+	background: -o-linear-gradient(left,#2290D9, #6A18B4); 
+	background: -moz-linear-gradient(left,#2290D9, #6A18B4);
+	background: linear-gradient(left,#2290D9, #6A18B4); 
 	color: #FFF;
 	float: left;
+	z-index: 2;
+	position: absolute;
 }
 
-/*
-#galButton ul li{
-	display: block;
-	width: 120px;
-	height: 25px;
-	position: relative;
-}
-#galButton ul li:hover,#galButton hr:hover{
-	width: 130px;
-	height: 30px;
-	position: relative;
-	background: #00B7FF;
-	text-align: center;
-}
-.hr{
-	display: block;
-	width: 100px;
-	height: 25px;
-}
-#galButton hr{
-	opacity: 0.5;
-	width: 100px;
-	border: solid #BABABA 2px;
-	margin-top: 10px;
-	position: relative;
-}
-.hoverButton{
-	display: none;
-	width: 150px;
-	height: 30px;
-	background: #00B7FF;
-	position: absolute;
-	float: left;
-	left: -15px;
-	top: -15px;
-}
-*/
