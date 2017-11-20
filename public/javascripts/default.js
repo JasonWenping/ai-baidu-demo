@@ -33,8 +33,12 @@ function navList(){
 
 var ul = document.getElementById('gallery');
 var btn = document.getElementById('galButton');
+var gSwith = document.getElementsByClassName('swich_icon');
+var gFrame = document.getElementsByTagName('section');
 
-var Picture = {
+//整合一下galler的元素。
+
+var Gallery = {
 	ul: ul,
 	btn: btn,
 	line: function(){
@@ -54,6 +58,12 @@ var Picture = {
 			}
 		}
 		return num;
+	},
+	sLeft:function(){
+		return gSwith[0].getElementsByClassName('left')[0];
+	},
+	sRight:function(){
+		return gSwith[0].getElementsByClassName('right')[0];
 	}
 };
 
@@ -65,9 +75,11 @@ var Picture = {
 function imgGallery(){
 	//if(!document.getElementById) return false;
 
-	var line = Picture.line();
-	var hover = Picture.hover();
-	var icon = Picture.icon();
+	var line = Gallery.line();
+	var hover = Gallery.hover();
+	var icon = Gallery.icon();
+	var sleft = Gallery.sLeft();
+	var sright = Gallery.sRight();
 	var zindex = new Array();
 	for (var i = 0; i<line.length;i++)
 	{
@@ -78,17 +90,22 @@ function imgGallery(){
 		icon[i].onclick = function(i){		    
 			return function(){
 				var iindex = this.dataset.index;
-				line[i-1].style.animationName = 'fadeInOut';
 				for(var j=0;j<line.length;j++){
 					var lindex = line[j].dataset.index;
 					if(iindex == lindex)
 					{
-						line[lindex].style.zIndex = 1;
-						line[lindex].style.animationName = 'fadeOutIn'
+						line[j].style.zIndex = 1;
+						
+						if(j!=0)
+						{
+							line[j].style.animationName = 'fadeOutIn';
+							line[j-1].style.animationName = 'fadeInOut';
+						}else{
+							line[j].style.animationName = 'fadeOutIn';
+						}					
 						//console.log(lindex);
 					}else{
 						line[j].style.zIndex = -j;
-						line[lindex].style.animationName = 'fadeInOut';
 					}
 				}
 			}
@@ -103,11 +120,121 @@ function imgGallery(){
 				hover[i].style.display = 'none';
 			}
 		}(i);
+		/*
+
+		sright.onclick = function(i){
+		//if
+			return function(){
+				if(i!=line.length-1){
+					line[i].style.animationName = 'fadeInOut';
+					line[i+1].style.animationName = 'fadeOutIn';
+					alert(i);
+				}else{
+					line[0].style.animationName = 'fadeOutIn';
+					line[i].style.animationName = 'fadeInOut';
+					alert(i);
+				}
+			}		
+		}(i);
+		*/
+
+		sleft.onclick = function(){
+
+		}
+		
 		//console.log(iindex);
 	}
+	//console.log(Picture.ul.tagName);
+	//console.log(sright.tagName);
+
+	
+	gFrame[0].onmouseover = function(){
+				sleft.style.display = 'block';
+				sright.style.display = 'block';
+			}
+	gFrame[0].onmouseout = function(){
+				sleft.style.display = 'none';
+				sright.style.display = 'none';
+			}
 		//line[0].style.animationDelay = i * 5 + 's';
 	//console.log(dindex);
 }
 
+
+function videoPlay(){
+	var box = document.getElementsByClassName('videoBox');
+	var mv = document.getElementsByTagName('video');
+	var pannel = document.getElementById('v_presentation');
+	var h = pannel.getElementsByTagName('h3');
+	var shaddow = document.getElementsByClassName('shaddow');
+	var playIcon = document.getElementsByClassName('playIcon');
+	for(var i=0;i<box.length;i++){
+		box[i].onmouseover = function(i){
+			return function(){
+				mv[i].autoplay = 'autoplay';
+				mv[i].loop = 'loop';
+				mv[i].style.display = 'block';
+				h[i].style.display = "block";
+				shaddow[i].style.display = "block";
+				playIcon[i].style.display = 'block';
+			}
+		}(i);
+		box[i].onmouseout = function(i){
+			return function(){
+				mv[i].removeAttribute('autoplay');
+				mv[i].style.display = 'none';
+				h[i].style.display = "none";
+				shaddow[i].style.display = "none";
+				playIcon[i].style.display = 'none';
+			}
+			//this.pause();
+		}(i);
+	}
+}
+
+function showIntroduction(){
+	var line1 = document.getElementById('Introduction');
+	var ulBox = line1.getElementsByTagName('li');
+	var intrBox = line1.getElementsByClassName('list_intro');
+	var iconbg = line1.getElementsByClassName('icon_bg');
+	var h = line1.getElementsByTagName('h4');
+	for(var i in ulBox){
+		//alert('hh');
+		ulBox[i].onclick = function(i){
+			return function(){
+				for(var j in intrBox){
+					if(i==j){
+						intrBox[j].style.display = 'block';
+						intrBox[j].style.position = 'relative';
+						//iconbg[i].className = 'icon_bg_hover';
+						ulBox[j].style.backgroundColor = '#000';
+						h[j].style.color = '#FFF';
+					}
+					else{
+						intrBox[j].style.display = 'none';
+						ulBox[j].removeAttribute('style');
+						h[j].style.color = '#252525';						
+						intrBox[j].style.position = 'absolute';
+					}
+				}
+			}
+		}(i);
+
+		/*
+		ulBox[i].onmouseout = function(i){
+			return function(){
+				//intrBox[0].style.display = 'none';
+				//iconbg[i].className = 'icon_bg';
+				ulBox[i].removeAttribute('style');
+				h[i].style.color = '#252525';
+			}
+		}(i);
+		*/
+	}
+}
+
+
 addLoadEvent(navList);
 addLoadEvent(imgGallery);
+addLoadEvent(videoPlay);
+addLoadEvent(showIntroduction);

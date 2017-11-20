@@ -137,6 +137,11 @@
   		</ul>
 
 	  	 <div class="gallery_bg"></div>
+
+	  	 <div class="swich_icon">
+	  	 	<div class="left"></div>
+	  	 	<div class="right"></div>
+	  	 </div>
 	  	 <div id="galButton">
 	  	   	<% for(var i=0;i< gallery.length;i++){ %>
 	  	   	<div class="gal-btn-list" data-index=<%= i %>>
@@ -147,6 +152,141 @@
 	  	   	
 	  	   </div>  	   
   	</section>
+  	<div id="t_banner">
+  		<ul>
+  			<% for(var i=0;i< visitTitle.length;i++){ %>
+  			<li>
+  				<h3>
+  					<%= visitTitle[i] %>
+  				</h3>
+  				<img src="">
+  				<span><%= visitTag[i] %></span>
+  			</li>
+  			<% } %>
+  		</ul>
+  	</div>
+
+  	<div id="v_presentation">
+	  		<div class="videoBox">
+	  			<div class="imgCut" style="background: url(/images/v1.jpg) center; background-size: cover;"></div>
+	  			<video src="http://hbnm3eqf9mju26279qj.exp.bcevod.com/mda-hkniqyvm0ux67mpy/mda-hkniqyvm0ux67mpy.mp4"></video>
+	  			<div class="shaddow"></div>
+	  			<div class="playIcon"></div>	  			
+	  			<h3>Appllo,驾驶也可以自由仰望星空</h3>
+	  		</div>
+	  		<div class="videoBox_2">
+	  			<div class="slogen">用科技让复杂的世界更简单</div>
+	  			<h2>AI改变生活</h2>
+	  		</div>
+	  		<div class="videoBox">
+	  			<div class="imgCut" style="background: url(/images/v2.jpg) center;  background-size: cover;"></div>
+	  			<video src="http://hbnm3eqf9mju26279qj.exp.bcevod.com/mda-hkniqz5ntm90q365/mda-hkniqz5ntm90q365.mp4"></video>
+	  			<div class="shaddow"></div>
+	  			<div class="playIcon"></div>	
+	  			<h3>DuerOS，唤醒乐高激发无限创造</h3>
+	  		</div>
+	  		<div class="videoBox">
+	  			<div class="imgCut" style="background: url(/images/v3.jpg) center; background-size: cover;"></div>
+	  			<video src="http://hbnm3eqf9mju26279qj.exp.bcevod.com/mda-hkjwubmciaqbekj1/mda-hkjwubmciaqbekj1.mp4"></video>
+	  			<div class="shaddow"></div>
+	  			<div class="playIcon"></div>	
+	  			<h3>人脸，独一无二的身份密码</h3>
+	  		</div>
+	  		<div class="videoBox">
+	  			<div class="imgCut" style="background: url(/images/v4.jpg) center; background-size: cover;"></div>
+	  			<video src="http://hbnm3eqf9mju26279qj.exp.bcevod.com/mda-hkjwubetj65aitdq/mda-hkjwubetj65aitdq.mp4"></video>
+	  			<div class="shaddow"></div>
+	  			<div class="playIcon"></div>	
+	  			<h3>AR，虚实融合创所未见</h3>
+	  		</div>
+	  		<div class="videoBox">
+	  			<div class="imgCut" style="background: url(/images/v5.jpg) center; background-size: cover;"></div>
+	  			<video src="http://hbnm3eqf9mju26279qj.exp.bcevod.com/mda-hkjwzvmtahakneb3/mda-hkjwzvmtahakneb3.mp4"></video>
+	  			<div class="shaddow"></div>
+	  			<div class="playIcon"></div>	
+	  			<h3>Unit对话机器人，暖心陪伴左右</h3>
+	  		</div>
+	</div>
+
+	<div id="Introduction">
+		<h1><%= ctitle[0] %></h1>
+		<div class="icon_items">
+			<ul id="line1">
+				<% for(var i=0;i < items1.length;i++){ %>
+				<li>
+					<div class="icon_bg"></div>
+					<h4><%= items1[i] %></h4>
+				</li>
+				<% } %>
+			</ul>
+			<div class="list_intro" style="display: block; position: relative;">语音识别</div>
+			<div class="list_intro">语音合成</div>
+			<div class="list_intro">语音唤醒</div>
+			<div class="list_intro">文字识别</div>
+			<div class="list_intro">人脸识别</div>
+		</div>
+
+		<div class="icon_items">
+			<ul>
+				<% for(var i=0;i < items1.length;i++){ %>
+				<li>
+					<div class="icon_bg"></div>
+					<h4><%= items1[i] %></h4>
+				</li>
+				<% } %>
+			</ul>
+			<div class="list_intro">语音识别2</div>
+			<div class="list_intro">语音合成2</div>
+			<div class="list_intro">语音唤醒2</div>
+			<div class="list_intro">文字识别2</div>
+			<div class="list_intro">人脸识别2</div>
+		</div>
+
+		<h1><%= ctitle[1] %></h1>
+		<div class="system">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+
+	<div id="Solution">
+		<h1><%= ctitle[2] %></h1>
+		<p>无缝对接业务需求，轻松实现方案集成</p>
+		<div class="s_show">
+			<% for(var i in sBox){ %>
+			<div class="s_box">
+				<img src="">
+				<h2><%= s_title[i] %></h2>
+				<span><%= s_note[i] %></span>
+			</div>
+			<% } %>
+		</div>
+	</div>
+
+
+	<div id="Custom">
+		<h1><%= ctitle[2] %></h1>
+
+		<ul>
+			<% for(var i in c_name){ %>
+			<li>
+				<img src="">
+				<h4><%= c_name[i] %></h4>
+			</li>
+			<% } %>
+		</ul>
+		<hr />
+		<div></div>
+	</div>
+
+
+
+
+
+	<footer>
+		<div class="fNav"></div>
+		<div class="copyRight"></div>
+	</footer>
 
 
   	<script type="text/javascript" src="/javascripts/addLoadEvent.js"></script>

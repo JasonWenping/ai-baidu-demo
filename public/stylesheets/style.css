@@ -2,6 +2,8 @@ body {
   padding: 0px;
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0px;
+  width: 100%;
+  background: #F3F3F3;
 }
 
 h3,nav ul li,.nav_title_3 ul li,nav span,button{
@@ -31,15 +33,24 @@ nav a:hover{
 	height: 60px;
 }
 h1{
-
-}
-h2{
-
+	font-size: 36px;
+	font-weight: normal;
+	margin: 100px;
 }
 h3{
+	margin: 0;
 }
-h4{
+h2{
+	margin: 0;
+	font-size: 32px;
+	font-weight: normal;
+	color: #FFF;
+}
 
+h4{
+	font-size: 16px;
+	color: #252525;
+	margin: 0;
 }
 h5{
 
@@ -49,9 +60,10 @@ header{
 	width:100%;
 	height: 60px;
 	background: #000;
-	position: absolute;
+	position: fixed;
 	top:0;
 	color:#FFF;
+	z-index: 10;
 }
 nav{
 
@@ -198,8 +210,31 @@ section ul li{
 	background: url(/images/gallery_bg.png) repeat-x;
 	position: absolute;
 	top: 60px;
-	z-index: 5	;
 }
+.swich_icon{
+	width: 100%;
+	height: 48px;
+	position: absolute;
+	top: 240px;
+}
+.left,.right{
+	width: 37px;
+	height: 64px;
+	cursor: pointer;
+	display: none;
+}
+.left{	
+	background: url(/images/left_icon.png) no-repeat;
+	float: left;
+	margin-left: 100px; 
+}
+.right{
+	background: url(/images/right_icon.png) no-repeat;
+	float: right;
+	margin-right: 100px; 
+}
+
+
 
 #galButton{
 	width: 1000px;
@@ -238,7 +273,135 @@ section ul li{
 	background: linear-gradient(left,#2290D9, #6A18B4); 
 	color: #FFF;
 	float: left;
-	z-index: 2;
 	position: absolute;
 }
+
+#t_banner,#v_presentation{
+	width: 1196px;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+#t_banner ul li{
+	width: 229px;
+	height: 120px;
+	float: left;
+	margin-right: 70px; 
+}
+#t_banner ul li h3{
+	color: #000;
+	width: 200px;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+
+.slogen,.shaddow,.videoBox,.videoBox_2,.imgCut,.playIcon{
+	width: 398px;
+	height: 261px;
+}
+
+.slogen,video,.shaddow,.videoBox_2 h2,.videoBox h3,.imgCut,.playIcon{
+	position: absolute;
+	float: left;
+}
+
+.videoBox,.videoBox_2{
+	float: left;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.videoBox h3{
+	top: 30px;
+	width: 399px;
+	font-size: 22px;
+	font-weight: normal;
+	display: none;
+}
+.playIcon{
+	background: url(/images/play.png) no-repeat center;
+	display: none;
+}
+.videoBox_2 h2{
+	top: 60px;
+	width: 399px;
+}
+
+.slogen{
+	background: #242424;
+	font-size: 16px;
+	color: #999;
+	line-height: 261px;
+}
+.shaddow{
+	background: #000;
+	opacity: 0.3;
+	display: none;
+	transform: opactity();
+	transition: 1s;
+}
+video{
+	height: 261px;
+	left: 0;
+	display: none;
+}
+
+
+/****************************************introduction*********************/
+
+#Introduction{
+	margin-top: 30px; 
+	color: #000;
+	text-align: center;
+
+}
+.icon_items{
+	margin-top:20px;
+	position: relative;
+}
+#Introduction ul{
+	width: 1196px;
+	height: 135px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#Introduction ul li{
+	width: 188px;
+	height: 135px;
+	float: left;
+	margin-left: 41px;
+	cursor: pointer;
+	padding-top: 20px;
+}
+
+.icon_bg{	
+	width: 85px;
+	height: 75px;
+	margin: 0 auto;
+	background: url(/images/icons_bg2.gif) -15px 0 no-repeat;
+}
+.icon_bg_hover{
+	width: 85px;
+	height: 75px;
+	margin: 0 auto;
+	background: url(/images/icons_bg2-back.gif) -15px 0 no-repeat;
+}
+.h4-hover{
+	color: #FFF;
+}
+
+
+.list_intro{
+	width: 100%;
+	height: 311px;
+	background: #000;
+	display: none;
+	color: #FFF;
+}
+
+
+/*----------------------------------------------------introduction2----------------------------------*/
 
