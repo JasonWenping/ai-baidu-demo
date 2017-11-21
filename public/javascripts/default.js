@@ -194,12 +194,15 @@ function videoPlay(){
 
 function showIntroduction(){
 	var line1 = document.getElementById('Introduction');
-	var ulBox = line1.getElementsByTagName('li');
+	var ulBox = line1.getElementsByClassName('list_title');
 	var intrBox = line1.getElementsByClassName('list_intro');
 	var iconbg = line1.getElementsByClassName('icon_bg');
 	var h = line1.getElementsByTagName('h4');
 	for(var i in ulBox){
 		//alert('hh');
+
+		ulBox[0].style.backgroundColor = '#252525';
+		h[0].style.color = '#FFF';
 		ulBox[i].onclick = function(i){
 			return function(){
 				for(var j in intrBox){
@@ -207,7 +210,7 @@ function showIntroduction(){
 						intrBox[j].style.display = 'block';
 						intrBox[j].style.position = 'relative';
 						//iconbg[i].className = 'icon_bg_hover';
-						ulBox[j].style.backgroundColor = '#000';
+						ulBox[j].style.backgroundColor = '#252525';
 						h[j].style.color = '#FFF';
 					}
 					else{
@@ -219,17 +222,32 @@ function showIntroduction(){
 				}
 			}
 		}(i);
+	}
+}
 
-		/*
-		ulBox[i].onmouseout = function(i){
+
+function customSwitch(){
+	var area = document.getElementById('Custom');
+	var select = area.getElementsByTagName('li');
+	var cname = area.getElementsByTagName('h4');
+	var detailBox = document.getElementsByClassName('ai_custom_detail');
+	for(var i in select){
+		detailBox[0].style.display = 'block';
+		cname[0].style.fontWeight = 'bold';
+		select[i].onclick = function(i){
 			return function(){
-				//intrBox[0].style.display = 'none';
-				//iconbg[i].className = 'icon_bg';
-				ulBox[i].removeAttribute('style');
-				h[i].style.color = '#252525';
+				for(var j in detailBox){
+					if(i==j){
+						detailBox[j].style.display = 'block';
+						cname[j].style.fontWeight = 'bold';
+					}
+					else{
+						detailBox[j].style.display = 'none';
+						cname[j].style.fontWeight = 'normal';
+					}
+				}
 			}
 		}(i);
-		*/
 	}
 }
 
@@ -238,3 +256,4 @@ addLoadEvent(navList);
 addLoadEvent(imgGallery);
 addLoadEvent(videoPlay);
 addLoadEvent(showIntroduction);
+addLoadEvent(customSwitch);

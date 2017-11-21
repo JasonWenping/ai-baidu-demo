@@ -211,49 +211,230 @@
 	<div id="Introduction">
 		<h1><%= ctitle[0] %></h1>
 		<div class="icon_items">
-			<ul id="line1">
+			<ul>
 				<% for(var i=0;i < items1.length;i++){ %>
-				<li>
-					<div class="icon_bg"></div>
+				<li class='list_title'>
+					<div class="icon_bg" style="background: url(/images/icons_bg2.gif) <%= -15-i*240 %>px no-repeat;"></div>
 					<h4><%= items1[i] %></h4>
 				</li>
 				<% } %>
 			</ul>
-			<div class="list_intro" style="display: block; position: relative;">语音识别</div>
-			<div class="list_intro">语音合成</div>
-			<div class="list_intro">语音唤醒</div>
-			<div class="list_intro">文字识别</div>
-			<div class="list_intro">人脸识别</div>
+			<div class="list_intro" style="display: block; position: relative;background: url(/images/txsh.png) no-repeat; background-size: 350px; background-color: #252525;">
+				<div class="subject">
+					<h2><%= items1[0] %></h2>
+					<p>提供近场、远场、长语音等多场景高精度语音识别服务</p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+				<ul>
+			    	<li>
+			    		<h3>语音识别</h3>
+						<span>将语音转换成文字</span>
+			    	</li>
+			    	<li>
+			    		<h3>长语音识别</h3>
+						<span>将长语音（长时间连续）转成文字</span>
+			    	</li>
+			    	<li>
+			    		<h3>远场语音识别</h3>
+						<span>将远场（三至五米）的语音转成文字</span>
+			    	</li>
+			    </ul>
+			</div>
+			<div class="list_intro" style="background: url(/images/txsb.png) no-repeat center; background-size: 350px; background-color: #252525;">
+				<div class="subject_short">
+					<h2><%= items1[1] %></h2>
+					<p>将用户输入的文字，转换成流畅自然的语音输出，并且可以支持语速、音调、音量、音频码率设置， 打破传统文字式人机交互的方式，让人机沟通更自然 </p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+			</div>
+			<div class="list_intro" style="background: url(/images/txss.png) no-repeat center; background-size: 350px; background-color: #252525;">
+				<div class="subject_short">
+					<h2><%= items1[2] %></h2>
+					<p>支持特定语音指令唤醒和打断、唤醒的同时执行指令操作。轻量级，低功耗， 可自定义设置多个唤醒词，为您的应用打造自然流畅的对话，唤醒各个软件系统 </p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+			</div>
+			<div class="list_intro" style="background: url(/images/spjs.png) no-repeat; background-size: 350px; background-color: #252525;">
+				<div class="subject">
+				<h2><%= items1[3] %></h2>
+				<p>提供多种场景下精准的图像文字识别技术服务 </p>
+				<a href=""><span>查看详情 ></span></a>
+			    </div>
+			    <ul>
+			    	<li>
+			    		<h3>通用文字识别</h3>
+						<span>多场景多语言的文字识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>网络图片识别</h3>
+						<span>在复杂字体和背景下的文字识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>卡证识别</h3>
+						<span>身份证、银行卡、驾驶证、行驶证识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>车牌识别</h3>
+						<span>对车牌进行文字识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>营业执照识别</h3>
+						<span>对营业执照进行文字识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>票据识别</h3>
+						<span>识别医疗、金融、物流等各类票据</span>
+			    	</li>
+			    	<li>
+			    		<h3>表格文字识别</h3>
+						<span>结构化识别表格内容信息</span>
+			    	</li>
+			    </ul>
+			</div>			
+			<div class="list_intro" style="background: url(/images/ar.png) no-repeat; background-size: 350px; background-color: #252525;">
+				<div class="subject">
+				<h2><%= items1[4] %></h2>
+				<p>基于深度学习的人脸识别技术，精准识别人脸信息，助力产品升级 </p>
+				<a href=""><span>查看详情 ></span></a>
+			    </div>
+			    <ul>
+			    	<li>
+			    		<h3>人脸检测</h3>
+						<span>检测人脸位置、属性、关键点及质量</span>
+			    	</li>
+			    	<li>
+			    		<h3>人脸对比</h3>
+						<span>比较两张人脸的相似度</span>
+			    	</li>
+			    	<li>
+			    		<h3>人脸查找</h3>
+						<span>在人脸库中找到相似的人脸</span>
+			    	</li>
+			    </ul>
+			</div>
 		</div>
 
 		<div class="icon_items">
 			<ul>
-				<% for(var i=0;i < items1.length;i++){ %>
-				<li>
-					<div class="icon_bg"></div>
-					<h4><%= items1[i] %></h4>
+				<% for(var i=0;i < items2.length;i++){ %>
+				<li class="list_title">
+					<div class="icon_bg" style="background: url(/images/icons_bg3.gif) <%= -15-i*240 %>px no-repeat;"></div>
+					<h4><%= items2[i] %></h4>
 				</li>
 				<% } %>
 			</ul>
-			<div class="list_intro">语音识别2</div>
-			<div class="list_intro">语音合成2</div>
-			<div class="list_intro">语音唤醒2</div>
-			<div class="list_intro">文字识别2</div>
-			<div class="list_intro">人脸识别2</div>
+			<div class="list_intro" style="background: url(/images/yycl.png) no-repeat; background-size: 350px; background-color: #252525;">
+				<div class="subject">
+					<h2><%= items2[0] %></h2>
+					<p>为精准和深度的中文语义分析与应用提供坚实技术基础 </p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+				<ul>
+			    	<li>
+			    		<h3>词法分析</h3>
+						<span>含中文分词、词性标注、命名实体识别</span>
+			    	</li>
+			    	<li>
+			    		<h3>依存句法分析</h3>
+						<span>分析中文语句的依存句法结构</span>
+			    	</li>
+			    	<li>
+			    		<h3>词向量表示</h3>
+						<span>词语的向量化计算表示</span>
+			    	</li>
+			    	<li>
+			    		<h3>DNN语言模型</h3>
+						<span>分析中文语句的通顺程度</span>
+			    	</li>
+			    	<li>
+			    		<h3>词义相似度</h3>
+						<span>计算两个中文词语之间的语义相似度</span>
+			    	</li>
+			    	<li>
+			    		<h3>短文本相似度</h3>
+						<span>计算两个中文短句之间的语义相似度</span>
+			    	</li>
+			    	<li>
+			    		<h3>评论观点抽取</h3>
+						<span>分析提取用户评论观点标签与情感极性</span>
+			    	</li>
+			    	<li>
+			    		<h3>情感倾向分析</h3>
+						<span>对主观信息文本进行情感极性判断</span>
+			    	</li>
+			    </ul>
+			</div>
+			<div class="list_intro" style="background: url(/images/wbsh.png) no-repeat center; background-size: 350px; background-color: #252525;">
+				<div class="subject_short">
+					<h2><%= items2[1] %></h2>
+					<p>基于深度学习的文本审核技术，一站式准确识别文本中夹杂的色情、推广、辱骂、违禁违法等垃圾内容， 净化网络环境，为您的应用提供更可靠的内容安全保障  </p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+			</div>
+			<div class="list_intro" style="background: url(/images/unit.png) no-repeat center; background-size: 350px; background-color: #252525;">
+				<div class="subject_short">
+					<h2><%= items2[2] %></h2>
+					<p>UNIT为对话逻辑配置平台，搭载业界领先的需求理解、对话控制及底层的机器学习、自然语言处理、知识挖掘等核心技术， 精确匹配业务逻辑，满足不同场景对话需求 </p>
+					<a href=""><span>查看详情 ></span></a>
+				</div>
+			</div>
+			<div class="list_intro" style="background: url(/images/txsh.png) no-repeat center; background-size: 350px; background-color: #252525;">
+				<div class="subject_short">
+				<h2><%= items2[3] %></h2>
+				<p>支持全球28种语言互译，756个翻译方向，每日响应过亿次的翻译请求。任何第三方应用或者网站都可以通过使用百度翻译API为用户提供实时优质的多语言翻译服务，提升产品体验  </p>
+				<a href=""><span>查看详情 ></span></a>
+			    </div>
+			</div>			
+			<div class="list_intro" style="background: url(/images/znyx.png) no-repeat; background-size: 350px; background-color: #252525;">
+				<div class="subject">
+				<h2><%= items2[4] %></h2>
+				<p>洞察市场及目标客户，挖掘企业信息，预测销售时机，提升营销效率  </p>
+			    </div>
+			    <ul>
+			    	<li>
+			    		<h3>客情分析</h3>
+						<span>客户销售意图预测，客户群体特征分析</span>
+			    	</li>
+			    	<li>
+			    		<h3>商情分析</h3>
+						<span>挖掘合适的潜在企业客户，提供销售转化预测服务</span>
+			    	</li>
+			    	<li>
+			    		<h3>司南营销分析</h3>
+						<span>全面、专业的品牌营销辅助分析工具</span>
+			    	</li>
+			    </ul>
+			</div>
 		</div>
 
 		<h1><%= ctitle[1] %></h1>
 		<div class="system">
-			<div></div>
-			<div></div>
+			<div class="ai_join_pannel">
+				<div class="ai-join-title">
+					<img src="/images/system2.jpg">
+					<h3>百度Apollo计划</h3>
+				</div>
+				<p>
+                Apollo（阿波罗）是一个开放的、完整的、安全的平台，将帮助汽车行业及自动驾驶领域的合作伙伴结合车辆和硬件系统，搭建一套属于自己的自动驾驶系统。
+                </p>
+			</div>
+			<div class="ai_join_pannel">
+				<div class="ai-join-title">
+					<img src="/images/system1.jpg">
+					<h3>对话式人工智能系统</h3>
+				</div>
+				<p>                
+                DuerOS为企业及开发者提供了一整套对话式人工智能解决方案。包括软硬一体化的智能设备解决方案和技能开发部署方案。赋予万物与人对话的能力。
+                </p>
+			</div>
 		</div>
-	</div>
+	</div>		
 
 	<div id="Solution">
 		<h1><%= ctitle[2] %></h1>
 		<p>无缝对接业务需求，轻松实现方案集成</p>
 		<div class="s_show">
-			<% for(var i in sBox){ %>
+			<% for(var i in s_title){ %>
 			<div class="s_box">
 				<img src="">
 				<h2><%= s_title[i] %></h2>
@@ -261,31 +442,108 @@
 			</div>
 			<% } %>
 		</div>
+		<div class="scroll_line"></div>
 	</div>
 
 
 	<div id="Custom">
-		<h1><%= ctitle[2] %></h1>
-
+		<h1><%= ctitle[3] %></h1>
 		<ul>
 			<% for(var i in c_name){ %>
 			<li>
-				<img src="">
-				<h4><%= c_name[i] %></h4>
+				<img src="/images/<%= c_name[i].logo %>">
+				<h4><%= c_name[i].cname %></h4>
 			</li>
 			<% } %>
 		</ul>
 		<hr />
-		<div></div>
+		<div class="ai_custom_box">
+			<% for(var i in c_info){ %>
+			<div class="ai_custom_detail">
+				<div class="ai_custom_info">
+					<div class="ai_custom_photo" style="background: url(/images/<%= c_info[i].photo %>) no-repeat; background-size: cover;"></div>
+					<h3><%= c_info[i].name %></h3>
+					<span><%= c_info[i].job %></span>
+				</div>
+				<div class="ai_custom_introduction">
+					<%= c_info[i].intro %>
+				</div>
+				<a href="#"><span>查看案例 > </span></a>
+			</div>
+			<% } %>
+	    </div>
 	</div>
 
+	<div id="Partner">
+		<h1><%= ctitle[4] %></h1>
+		<div></div>
+		<ul>
+			<% for(var i in partner){ %>
+			<li style="background: url(/images/<%= partner[i] %>);">
+			</li>
+			<% } %>
+		</ul>
 
+		<button type="button">申请合作</button>	
+	</div>
 
-
+	<div id="Product">
+		<h1><%= ctitle[5] %></h1>
+		<p> 我们致力于构建最全面、最开放、最前沿的AI开放平台。<br />提供最易用的API、SDK等开发组件，助力您快速高效地实现产品升级。 </p>
+		<div class="ai_data_show">
+			<div class="data">
+				<span class="data_num">85</span><span class="data_unit">项</span>
+				<div class="data_tag">技术能力</div>
+			</div>
+			<div class="data">
+				<span class="data_num">24</span><span class="data_unit">小时</span>
+				<div class="data_tag">快速集成</div>
+			</div>
+			<div class="data">
+				<span class="data_num">37w</span><span class="data_unit">+</span>
+				<div class="data_tag">开发者正在使用</div>
+			</div>
+		</div>
+		<button type="button">立即体验</button>
+	</div>
 
 	<footer>
-		<div class="fNav"></div>
-		<div class="copyRight"></div>
+		<div class="fNav">
+		<div class="link_list">
+			<h5><%= linkTitle[0] %></h5>
+			<% for (var i in links){ %>
+			<p><%= links[i] %></p>
+			<% } %>
+		</div>
+		<div class="link_list">
+			<h5><%= linkTitle[1] %></h5>
+			<% for (var i in links2){ %>
+			<p><%= links2[i] %></p>
+			<% } %>
+		</div>
+		<div class="link_list">
+			<h5><%= linkTitle[2] %></h5>
+			<% for (var i in links3){ %>
+			<p><%= links3[i] %></p>
+			<% } %>
+		</div>
+		<div class="link_list">
+			<h5><%= linkTitle[3] %></h5>
+			<% for (var i in links4){ %>
+			<p><%= links4[i] %></p>
+			<% } %>
+		</div>
+		<img src="" />
+		</div>
+		<div class="copyRight">
+			<span>友情链接：</span>
+			<ul>
+				<% for (var i in friend_link){ %>
+				<li><%= friend_link[i] %> |</li>
+				<% } %>
+			</ul>
+			<span>© 2017 Baidu 使用百度前必读</span>
+		</div>
 	</footer>
 
 
