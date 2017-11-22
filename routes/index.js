@@ -105,6 +105,65 @@ var c_info = [
 
 ];
 
+var paragraph = [
+{
+	author:'技术资源',
+	description:'专属的定期培训、技术支持，及新产品内测体验，还将有机会参与百度AI主题沙龙。'
+},
+{
+	author:'品牌共建',
+	description:'获得百度AI的品牌赋能推广，及专有的营销渠道推广，助力您创造品牌价值。'
+},
+{
+	author:'成就客户',
+	description:'获得定制化需求支持及入驻平台展现机会，引领行业升级，携手成就客户并推进AI生态的建设与发展。'
+}
+];
+
+var solution = [
+{
+	img:'solution1.jpg',
+	s_title:'人脸核身',
+	s_note:'快速完成身份核实，确保【真人】为【本人】'
+},
+{
+	img:'solution2.jpg',
+	s_title:'人脸会场签到',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台`'
+},
+{
+	img:'solution3.jpg',
+	s_title:'人脸会员识别',
+	s_note:'人脸注册、人脸自动补货签到、与会人员统计管理平台'
+},{
+	img:'solution4.jpg',
+	s_title:'人脸闸机',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+},{
+	img:'solution5.jpg',
+	s_title:'智能电销',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+},{
+	img:'solution6.jpg',
+	s_title:'机器人视觉',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+},{
+	img:'solution7.jpg',
+	s_title:'对话式机器人',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+},
+{
+	img:'solution8.jpg',
+	s_title:'智慧家庭',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+},
+{
+	img:'solution9.jpg',
+	s_title:'智能语音处理',
+	s_note:'参会人员邀请注册刷年、刷脸签到、与会人员统计管理平台'
+}]
+
+
 var partner = ['c1.jpg','c2.jpg','c3.jpg','c4.jpg','c5.jpg','c6.jpg','c7.jpg','c8.jpg'];
 
 var linkTitle = ['快速入口','开发资源','常见问题','服务支持'];
@@ -151,7 +210,9 @@ router.get('/', async (ctx, next) => {
     links2:links2,
     links3:links3,
     links4:links4,
-    friend_link:friend_link
+    friend_link:friend_link,
+    paragraph:paragraph,
+    solution:solution
   })
 })
 

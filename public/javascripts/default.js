@@ -231,6 +231,7 @@ function customSwitch(){
 	var select = area.getElementsByTagName('li');
 	var cname = area.getElementsByTagName('h4');
 	var detailBox = document.getElementsByClassName('ai_custom_detail');
+	var hr = area.getElementsByClassName('scrollHr');
 	for(var i in select){
 		detailBox[0].style.display = 'block';
 		cname[0].style.fontWeight = 'bold';
@@ -240,14 +241,62 @@ function customSwitch(){
 					if(i==j){
 						detailBox[j].style.display = 'block';
 						cname[j].style.fontWeight = 'bold';
+						hr[0].style.left = j*160  + 'px';
 					}
 					else{
 						detailBox[j].style.display = 'none';
 						cname[j].style.fontWeight = 'normal';
 					}
 				}
+
 			}
 		}(i);
+	}
+}
+
+function getX(obj,event){
+	var parObj = obj;
+	var x = event.clientX;//获取鼠标当前位置
+	var left = obj.offsetLeft + x;
+	while(parObj == parObj.offsetParent){
+		left += parObj.offsetLeft;
+	}
+	return left;
+}
+
+
+function solutionScroll(){
+	var solute = document.getElementById('Solution');
+	var sBox = solute.getElementsByClassName('s_show');
+	var line = solute.getElementsByClassName('scroll_line');
+	solute.onmousemove = function(e){
+		var left = getX(this,e);
+		var width = parseInt(solute.style.width);
+		console.log(width);
+		if(left < 600)
+		{
+			sBox[0].style.animationName = 'scrollRight';
+			sBox[0].style.animationPlayState = 'running';
+			line[0].style.animationName = 'scrollLineR';
+			line[0].style.animationPlayState = 'running';
+			//console.log(left);
+		}
+		else if(left > 900)
+		{
+			sBox[0].style.animationName = 'scrollLeft';
+			sBox[0].style.animationPlayState = 'running';
+			line[0].style.animationName = 'scrollLineL';			
+			line[0].style.animationPlayState = 'running';
+		}
+		else{
+			sBox[0].style.animationPlayState = 'paused';
+			line[0].style.animationPlayState = 'paused';
+		}
+
+	}
+	solute.onmouseout = function(){
+		sBox[0].style.animationPlayState = 'paused';
+		line[0].style.animationPlayState = 'paused';
 	}
 }
 
@@ -257,3 +306,4 @@ addLoadEvent(imgGallery);
 addLoadEvent(videoPlay);
 addLoadEvent(showIntroduction);
 addLoadEvent(customSwitch);
+addLoadEvent(solutionScroll);

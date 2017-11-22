@@ -434,11 +434,11 @@
 		<h1><%= ctitle[2] %></h1>
 		<p>无缝对接业务需求，轻松实现方案集成</p>
 		<div class="s_show">
-			<% for(var i in s_title){ %>
+			<% for(var i in solution){ %>
 			<div class="s_box">
-				<img src="">
-				<h2><%= s_title[i] %></h2>
-				<span><%= s_note[i] %></span>
+				<img src="/images/<%= solution[i].img %>">
+				<h2><%= solution[i].s_title %></h2>
+				<span><%= solution[i].s_note %></span>
 			</div>
 			<% } %>
 		</div>
@@ -456,7 +456,7 @@
 			</li>
 			<% } %>
 		</ul>
-		<hr />
+		<div class="hr"><div class="scrollHr"></div></div>
 		<div class="ai_custom_box">
 			<% for(var i in c_info){ %>
 			<div class="ai_custom_detail">
@@ -476,7 +476,14 @@
 
 	<div id="Partner">
 		<h1><%= ctitle[4] %></h1>
-		<div></div>
+		<div class="ai_partner_author">
+			<% for(var i in paragraph){ %>
+			<div class="ai_partner_box">
+				<h4><%= paragraph[i].author %></h4>
+				<p><%= paragraph[i].description %></p>
+			</div>
+			<% } %>
+		</div>
 		<ul>
 			<% for(var i in partner){ %>
 			<li style="background: url(/images/<%= partner[i] %>);">
@@ -509,6 +516,7 @@
 
 	<footer>
 		<div class="fNav">
+		<div class="fNav_box">
 		<div class="link_list">
 			<h5><%= linkTitle[0] %></h5>
 			<% for (var i in links){ %>
@@ -535,6 +543,7 @@
 		</div>
 		<img src="" />
 		</div>
+	</div>
 		<div class="copyRight">
 			<span>友情链接：</span>
 			<ul>
